@@ -3,8 +3,8 @@
 ### Ejercicio 1:
 Completar refactorizaciones del proyecto refactoring visto en clase.
 - [ ] Terminar/aplicar refactor
-  - [ ] methods
-  - [ ] objects
+  - [X] conditionals
+  - [X] data
   - [ ] methods
   - [ ] objects
 
