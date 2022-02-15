@@ -1,14 +1,11 @@
-package methods.inlinemethod.bad;
+package methods.inlinemethod.good;
 
 public class Main {
 	
-    private double interest = 5d;
+    final private static double INTEREST = 5d;
 
     double getRateInterest(){
-        return getAdjustedInterest() ? 2 : 1;
+        return INTEREST > 5 ? 2 : 1;
     }
 
-	private boolean getAdjustedInterest() {
-		return interest > 5;
-	}
 }

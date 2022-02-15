@@ -1,12 +1,17 @@
-package methods.inlinetemp.bad;
+package methods.inlinetemp.good;
 
 public class Order {
 
+	public static final int MIN_TO_APPLY_DISCOUNT = 200;
 	private Double price;
 	private Double quantity;
 	private Double offer;
 	private Double shipping;
-	
+
+	public Order(Double price) {
+		this.price = price;
+	}
+
 	public Double getPrice() {
 		return price;
 	}
@@ -31,7 +36,9 @@ public class Order {
 	public void setShipping(Double shipping) {
 		this.shipping = shipping;
 	}
-	
+	public Boolean hasDiscount() {
+		return this.price > MIN_TO_APPLY_DISCOUNT;
+	}
 	
 	
 }

@@ -1,5 +1,5 @@
-package techniquessought.removesettingmethods.bad;
-
+package techniquessought.removesettingmethods.good;
+// Source: https://refactoring.guru/es/remove-setting-method
 public class Main {
     final double pi = 3.14159;
     final int randomNumber = 123;
@@ -8,11 +8,10 @@ public class Main {
     final double result = mCalculator.getPi() * randomNumber;
 
 
-    final double anotherResult = getComplexCalcul(); // for some error pi is modify;
+    final double anotherResult = getComplexCalc(); // by removing the setter we preserve the value of its instantiation
 
 
-    private double getComplexCalcul() {
-        mCalculator.setPi(10.0);
+    private double getComplexCalc() {
         return mCalculator.getPi() * randomNumber;
     }
 
@@ -26,9 +25,6 @@ public class Main {
             return pi;
         }
 
-        public void setPi(double pi) {
-            this.pi = pi;
-        }
     }
 }
 

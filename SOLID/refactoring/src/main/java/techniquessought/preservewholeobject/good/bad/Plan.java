@@ -1,7 +1,8 @@
-package techniquessought.preservewholeobject.bad;
+package techniquessought.preservewholeobject.good.bad;
 
 public class Plan {
-    public boolean withinRange(int low, int high) {
-        return low > high;
+
+    public boolean withinRange(DaysTempRange daysTempRange) {
+        return daysTempRange.getLow() > daysTempRange.getHigh();
     }
 }

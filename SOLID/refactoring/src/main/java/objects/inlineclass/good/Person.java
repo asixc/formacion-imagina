@@ -1,4 +1,4 @@
-package objects.inlineclass.bad;
+package objects.inlineclass.good;
 
 public class Person {
 
@@ -6,4 +6,6 @@ public class Person {
     private String firstName;
     private String lastName;
     private Integer age;
+
+    private String postalCode;
 }

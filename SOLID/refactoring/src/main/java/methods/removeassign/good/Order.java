@@ -1,4 +1,4 @@
-package methods.removeassign.bad;
+package methods.removeassign.good;
 
 public class Order {
 

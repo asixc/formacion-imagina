@@ -1,20 +1,34 @@
-package techniquessought.methodswithlongparameterlist.bad;
-
+package techniquessought.methodswithlongparameterlist.good;
+// Source: https://refactoring.guru/es/smells/long-parameter-list
 public class Main {
 
     public static void main(String[] args) {
-        final int nArticles = 1;
-        final double price = 100.24;
-        final String description = "Blu-ray";
-        final String dataAsString = "25-12-2021";
-        final String dniClient = "40080098D";
-        final String companyNif = "B50040400";
 
-        boolean result = registerPurchase(nArticles, price, description, dataAsString, dniClient, companyNif);
+        final Article article = giveArticle(1, 100.24, "Blu-ray");
+        final Purchase purchase = generatePurchase(article);
+
+        boolean result = registerPurchase(purchase);
 
     }
 
-    private static boolean registerPurchase(int nArticles, double price, String description, String dataAsString, String dniClient, String companyNif) {
+    private static Purchase generatePurchase(Article article) {
+        Purchase purchase = new Purchase();
+        purchase.setArticle(article);
+        purchase.setCompanyNif("B50040400");
+        purchase.setDataAsString( "25-12-2021");
+        purchase.setDniClient("40080098D");
+        return purchase;
+    }
+
+    private static Article giveArticle(int nArticles,double cost, String description) {
+        Article article = new Article();
+        article.setnArticles(nArticles);
+        article.setPrice(100.24);
+        article.setDescription("Blu-ray");
+        return article;
+    }
+
+    private static boolean registerPurchase(Purchase purchase) {
 
         // ... does different things
         return true;

@@ -1,32 +1,12 @@
-package conditionals.consolidatedconditional.bad;
+package techniquessought.preservewholeobject.bad;
 
 public class Main {
-	
-    private double extraSalary;
-    private int seniority;
-    private int education;
-    private int incidents;
-    private boolean certification;
 
-    double calculateExtraSalary(){
-        double result = 0;
-        if (seniority<1){
-            return 0;
-        }
-        if (education<1){
-            return 0;
-        }
-        if(incidents > 10){
-            return 0;
-        }
-        if (!certification){
-            return 0;
-        }
-        
-        // Calculate extra salary:
-        // ...
-        return result;
-
-    }
+    final DaysTempRange daysTempRange = new DaysTempRange(1,2);
+    final Plan plan = new Plan();
+    int low = daysTempRange.getLow();
+    int high = daysTempRange.getHigh();
+    boolean withinPlan = plan.withinRange(low, high);
 
 }
+

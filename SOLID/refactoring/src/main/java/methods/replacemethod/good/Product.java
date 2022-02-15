@@ -1,4 +1,4 @@
-package methods.replacemethod.bad;
+package methods.replacemethod.good;
 
 public class Product {
 
@@ -12,18 +12,6 @@ public class Product {
     // metodos
 
     // tostring
-
-    public double calculatePrice(){
-        double result = 0;
-        double priceQuantity = this.price * this.quantity;
-        double priceDiscount = this.price * this.discount;
-        double priceShipping = shipping * 0.50;
-
-        // .......
-
-        // ......
-        return result;
-    }
     
     // getter y setter 
 	public double getPrice() {

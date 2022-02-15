@@ -1,12 +1,12 @@
-package techniquessought.preservewholeobject.bad;
+package techniquessought.preservewholeobject.good.bad;
 
+// Source https://refactoring.guru/es/preserve-whole-object
 public class Main {
 
     final DaysTempRange daysTempRange = new DaysTempRange(1,2);
     final Plan plan = new Plan();
-    int low = daysTempRange.getLow();
-    int high = daysTempRange.getHigh();
-    boolean withinPlan = plan.withinRange(low, high);
+
+    boolean withinPlan = plan.withinRange(daysTempRange);
 
 }
 

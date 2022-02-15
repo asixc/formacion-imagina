@@ -1,4 +1,4 @@
-package techniquessought.preservewholeobject.bad;
+package techniquessought.preservewholeobject.good.bad;
 
 public class DaysTempRange {
     private int low;
